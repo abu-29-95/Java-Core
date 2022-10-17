@@ -2,14 +2,16 @@ package Lesson9;
 
 import com.github.javafaker.Faker;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
         List<Course> courses =new ArrayList<>();
         courses.add(new Course("Основы ручного тестирования"));
-        courses.add(new Course ("Основы Веб тестирования"));
+        courses.add(new Course("Основы Веб тестирования"));
         courses.add(new Course("Java. Level-1"));
         courses.add(new Course("Java core"));
         courses.add(new Course("База данных"));
@@ -29,9 +31,6 @@ public class Main {
         Course course4 = new Course(courses.get(4).getCourseName());
         students.stream().filter(student -> student.getAllCourses().contains(course4))
                 .collect(Collectors.toList()).forEach(student -> System.out.println(student.getName()));
-
-
-
 
     }
     private static List<Student> getListOfStydent(List<Course> courses) {

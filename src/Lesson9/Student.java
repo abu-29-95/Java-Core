@@ -2,10 +2,6 @@ package Lesson9;
 
 
 
-import com.github.javafaker.Faker;
-import com.github.javafaker.Name;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class Student {
